@@ -1,0 +1,1131 @@
+<meta http-equiv="pragma" content="no-cache" />
+<style>
+    .mainFrame {
+        position: absolute; 
+        width: 1275px; 
+        height: 900px; 
+        background-color: #2f4156;
+    }
+    .titleMenu {
+        position: absolute; 
+        left: 0px;
+        top: 0px;
+        width: 1275px; 
+        height: 900px; 
+        background-image: url('./images/Login_BG.jpg');
+    }
+    .endChatButton {
+        position: absolute;
+        left: 20px;
+        top: 17px;
+        width: 124px;
+        height: 34px; 
+        border-radius: 5px;
+        border: solid 3px rgb(255, 255, 255);
+        background-color: rgb(47, 65, 86);
+        font-family: MontserratRegular;
+        font-size: 20.5px;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+        line-height: 34px;
+    }
+    .libraChatSystem {
+        position: absolute;
+        left: 166px;
+        top: 26px;
+        width: 317px;
+        height: 21px;
+        opacity: 0.75; 
+        font-family: MontserratRegular;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 21px;
+    }
+    .slimModeButton {
+        position: absolute;
+        left: 500px;
+        top: 17px;
+        width: 124px;
+        height: 34px; 
+        border-radius: 5px;
+        border: solid 3px rgb(255, 255, 255);
+        background-color: rgb(47, 65, 86);
+        font-family: MontserratRegular;
+        font-size: 20.5px;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+        line-height: 34px;
+    }
+    .notificationButtonOn {
+        position: absolute;
+        left: 648px;
+        top: 22px;
+        width: 52px;
+        height: 34px;
+        background-image: url('./images/Sound_On.png');
+        background-repeat: no-repeat;
+    }
+    .notificationButtonOn:hover {
+        background-image: url('./images/Sound_On_Hover.png');
+        background-repeat: no-repeat;
+    }
+    .notificationButtonOff {
+        position: absolute;
+        left: 648px;
+        top: 22px;
+        width: 52px;
+        height: 34px;
+        background-image: url('./images/Sound_Off.png');
+        background-repeat: no-repeat;
+    }
+    .notificationButtonOff:hover {
+        background-image: url('./images/Sound_Off_Hover.png');
+        background-repeat: no-repeat;
+    }
+    .vizHolder {
+        position: absolute; 
+        left: 20px; 
+        top: 72px; 
+        width: 607px; 
+        height: 808px; 
+        background-color: #21344B; 
+        border-radius: 10px;
+    }
+    .vizFrost {
+        width: 607px; 
+        height: 808px; 
+        background-color: #8F8F8F; 
+        border-radius: 10px;
+        opacity: 0.75;
+    }
+    .frostText {
+        position: absolute;
+        top: 45%;
+        width: 100%;
+        text-align: center;
+        line-height: 40px;
+        font-family: MontserratBold;
+        font-size: 30px;
+        color: white;
+    }
+    .communicationFeedback {
+        position: absolute;
+        top: 44px;
+        width: 100%;
+        font-family: MontserratSemiBold;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.25);
+    }
+    .textVizPlayerA {
+        position: absolute;
+        top: 151px;
+        left: 0px;
+        width: 50%;
+        font-family: MontserratRegular;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffc300;
+    }
+    .textVizPlayerB {
+        position: absolute;
+        top: 151px;
+        right: 0px;
+        width: 50%;
+        font-family: MontserratRegular;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        color: #19b4ff;
+    }
+    .textVizPlayerC {
+        position: absolute;
+        top: 575px;
+        width: 100%;
+        font-family: MontserratRegular;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        color: #ff5f57;
+    }
+    .horizontalBarLabels {
+        position: absolute;
+        display: inline-flex;
+        left: 20px;
+        top: 716px;
+        width: 567px;
+        height: 24px;
+    }
+    .horizontalLabelPlayerA {
+        width: 33.3%;
+        color: #ffc300;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px;
+    }
+    .horizontalLabelPlayerB {
+        width: 33.4%;
+        color: #19b4ff;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px;
+    }
+    .horizontalLabelPlayerC {
+        width: 33.3%;
+        color: #ff5f57;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px;
+    }
+    .horizontalVizBarHolder {
+        position: absolute;
+        display: inline-flex;
+        left: 20px;
+        top: 740px;
+        width: 567px;
+        height: 48px;
+        background-color: aqua;
+        border-radius: 5px;
+    }
+    .horizontalVizPlayerA {
+        width: 33.3%;
+        background-color: #ffc300;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        color: #2f4156;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 48px;
+    }
+    .horizontalVizPlayerB {
+        width: 33.4%;
+        background-color: #19b4ff;
+        color: #2f4156;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 48px;
+    }
+    .horizontalVizPlayerC {
+        width: 33.3%;
+        background-color: #ff5f57;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: #2f4156;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 48px;
+    }
+    .textHolder {
+        position: absolute;
+        display: grid;
+        grid-template-rows: auto min-content min-content;
+        left: 647px;
+        top: 70px;
+        width: 603px;
+        height: 755px;
+        border-radius: 10px;
+        border: solid 3px #bfbfbf;
+        background-color: #57616B;
+    }
+    .tabUnreadCircle {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 26px;
+        height: 26px;
+        background-color: white;
+        border-radius: 100%;
+        color: #2f4156;
+        font-family: MontserratRegular;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 26px;
+    }
+    .tab1Style {
+        position: absolute;
+        left: 717px;
+        top: 19px;
+        width: 172px;
+        height: 55px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: #bfbfbf;
+        color: #2f4156;
+        font-family: MontserratRegular;
+        font-size: 23.5px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 55px;
+    }
+    .tab1Style:hover {
+        background-color: #bfbfbf;
+    }
+    .tab2Style {
+        position: absolute;
+        left: 896px;
+        top: 19px;
+        width: 172px;
+        height: 55px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .tab3Style {
+        position: absolute;
+        left: 1076px;
+        top: 19px;
+        width: 172px;
+        height: 55px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .playerATabStyle {
+        background-color: #ffc300;
+        color: #2f4156;
+        font-family: MontserratRegular;
+        font-size: 23.5px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 55px;
+    }
+    .playerATabStyle:hover {
+        background-color: #ffc300;
+    }
+    .playerBTabStyle {
+        background-color: #19b4ff;
+        color: #2f4156;
+        font-family: MontserratRegular;
+        font-size: 23.5px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 55px;
+    }
+    .playerBTabStyle:hover {
+        background-color: #19b4ff;
+    }
+    .playerCTabStyle {
+        background-color: #ff5f57;
+        color: #2f4156;
+        font-family: MontserratRegular;
+        font-size: 23.5px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 55px;
+    }
+    .playerCTabStyle:hover {
+        background-color: #ff5f57;
+    }
+    .chatControls {
+        position: absolute;
+        left: 648px;
+        top: 842px;
+        width: 607px;
+        height: 39px;
+        border-radius: 18.5px;
+        background-color: #8a8d91;
+    }
+    .emoteMenuBtn {
+        position: absolute;
+        left: 7px;
+        top: 6px;
+        width: 27px;
+        height: 27px;
+        padding: 1px;
+        background-image: url('./images/Emotes.png');
+        background-repeat: no-repeat;
+    }
+    .emoteMenuBtn:hover {
+        background-image: url('./images/Emotes_Hover.png');
+        background-repeat: no-repeat;
+    }
+    .chatInput {
+        position: absolute;
+        left: 46px;
+        top: 6px;
+        width: 515px;
+        height: 24px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.75);
+        font-family: icomoon;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: left;
+    }
+    .sendBtn {
+        position: absolute;
+        left: 574px;
+        top: 7px;
+        width: 32px;
+        height: 32px;
+        background-image: url('./images/Send.png');
+        background-repeat: no-repeat;
+    }
+    .sendBtn:hover {
+        background-image: url('./images/Send_Hover.png');
+        background-repeat: no-repeat;
+    }
+    .conversationDisplay {
+        background-color: #58616A; 
+        width: 100%;
+        max-height: 100%;
+        border-radius: 5px;
+        overflow-y: auto; 
+        overflow-x: hidden;
+    }
+    .typingNotification {
+        display: none;
+        background-color: rgba(0,0,0,0.25);
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        color: #bfbfbf;
+        font-family: MontserratSemiBold;
+        height: 24px;
+        max-height: 24px;
+        line-height: 24px;
+        font-size: 20px;
+    }
+    .systemBubbleDisplay {
+        display: none;
+        background-color: rgba(0,0,0,0.25);
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .textBubbleA {
+        font-family: MontserratMedium;
+        font-size: 18px; 
+        line-height: 22px; 
+        border: 2px solid #FFD71B; 
+        background-color: #FFD71B; 
+        color: #202020; 
+        padding-top: 0px; 
+        padding-left: 5px; 
+        padding-right: 5px; 
+        padding-bottom: 5px; 
+        border-radius: 8px; 
+        margin: 4px; 
+        margin-left: -5px;
+        word-break: normal;
+    }
+    .textBubbleB {
+        font-family: MontserratMedium;
+        font-size: 18px; 
+        line-height: 22px; 
+        border: 2px solid #18B4FE; 
+        background-color: #18B4FE; 
+        color: #202020; 
+        padding-top: 0px; 
+        padding-left: 5px; 
+        padding-right: 5px; 
+        padding-bottom: 5px; 
+        border-radius: 8px; 
+        margin: 4px; 
+        margin-left: -5px; 
+        margin-right: 40px;
+        word-break: normal;
+    }
+    .textBubbleC {
+        font-family: MontserratMedium;
+        font-size: 18px; 
+        line-height: 22px; 
+        border: 2px solid #FE6057; 
+        background-color: #FE6057; 
+        color: #202020; 
+        padding-top: 0px; 
+        padding-left: 5px; 
+        padding-right: 5px; 
+        padding-bottom: 5px; 
+        border-radius: 8px; 
+        margin: 4px; 
+        margin-right: -5px;
+        word-break: normal;
+    }
+    .textBubbleSystem {
+        font-family: MontserratMedium;
+        font-size: 18px; 
+        line-height: 30px; 
+        background-color: #21344B;
+        color: #bfbfbf; 
+        padding: 24px; 
+        border-radius: 8px; 
+        height: 175px;
+        display: grid;
+        word-break: normal;
+    }
+    .textBubbleButtonLeft {
+        position: sticky;
+        font-family: MontserratSemiBold;
+        font-size: 20.5px; 
+        line-height: 33px; 
+        background-color: #21344B;
+        color: white; 
+        border-radius: 5px; 
+        border: 3px solid white;
+        width: 117px;
+        height: 35px;
+        text-align: center;
+        left: 176px;
+        top: 119px;
+        margin-right: 5px;
+        margin-left: 50px;
+    }
+    .textBubbleButtonRight {
+        position: sticky;
+        font-family: MontserratSemiBold;
+        font-size: 20.5px; 
+        line-height: 33px; 
+        background-color: #21344B;
+        color: white; 
+        border-radius: 5px; 
+        border: 3px solid white;
+        width: 117px;
+        height: 35px;
+        text-align: center;
+        left: 327px;
+        top: 119px;
+        margin-left: 5px;
+    }
+    .emoteMenu {
+        position: absolute; 
+        left: 647px;
+        top: 641px;
+        width: 32px; 
+        height: 234px; 
+        background-color: #2F4157; 
+        z-index: 1000; 
+        padding: 0px; 
+        margin: 0px; 
+        color: rgba(255, 255, 255, 0.6); 
+        font-family: icomoon; 
+        font-size: 25px; 
+        border-top-left-radius: 16px; 
+        border-top-right-radius: 16px; 
+        border-width: 3px; 
+        border: 3px solid #FFF;
+    }
+    .emoteItem {
+        padding-top: 5px; 
+        width: 32px; 
+        height: 28px; 
+        text-align: center;
+        font-family: icomoon; 
+    }
+    .emoteButton0::before {
+        content: '\E904';
+    }
+    .emoteButton1::before {
+        content: '\E902';
+    }
+    .emoteButton2::before {
+        content: '\E906';
+    }
+    .emoteButton3::before {
+        content: '\E905';
+    }
+    .emoteButton4::before {
+        content: '\E900';
+    }
+    .emoteButton5::before {
+        content: '\E903';
+    }
+    .emoteButton6::before {
+        content: '\E907';
+    }
+    .resultsMenu {
+        position: absolute; 
+        left: 170px;
+        top: 42px;
+        width: 935px; 
+        height: 806px; 
+        background-color: #2f4156;
+        border-radius: 5px;
+        border: 3px solid #8A8D91;
+        box-shadow: -8.5px 8.5px 0 0 rgba(18, 77, 107, 0.25);
+    }
+    .libraLoginBG {
+        position: absolute;
+        background-color: #2F4157;
+        width: 360px;
+        height: 585px;
+        border-radius: 12px;
+        border: 3px solid #8A8D92;
+        left: 455px;
+        top: 140px;
+    }
+    .libraTitleText {
+        position: absolute;
+        color: white;
+        font-family: MontserratSemiBold;
+        font-size: 73px;
+        top: 28px;
+        width: 100%;
+        text-align: center;
+    }
+    .libraTitleChatSystem {
+        position: absolute;
+        color: white;
+        font-family: MontserratRegular;
+        font-size: 26px;
+        top: 110px;
+        width: 100%;
+        text-align: center;
+    }
+    .libraTitleTriangleNormal {
+        position: absolute;
+        top: 180px;
+        left: 75px;
+        border-left: 110px solid transparent;
+        border-right: 110px solid transparent;
+        border-top: 115px solid rgba(160, 160, 160, 0.75);
+    }
+    .libraTitleTriangleReady {
+        position: absolute;
+        top: 180px;
+        left: 75px;
+        border-left: 110px solid transparent;
+        border-right: 110px solid transparent;
+        border-top: 115px solid rgba(160, 160, 160, 0.25);
+    }
+    .libraTitleTriangleA {
+        position: absolute;
+        top: 180px;
+        left: 75px;
+        border-left: 110px solid transparent;
+        border-right: 110px solid transparent;
+        border-top: 115px solid #ffc300;
+    }
+    .libraTitleTriangleB {
+        position: absolute;
+        top: 180px;
+        left: 75px;
+        border-left: 110px solid transparent;
+        border-right: 110px solid transparent;
+        border-top: 115px solid #19b4ff;
+    }
+    .libraTitleTriangleC {
+        position: absolute;
+        top: 180px;
+        left: 75px;
+        border-left: 110px solid transparent;
+        border-right: 110px solid transparent;
+        border-top: 115px solid #ff5f57;
+    }
+    .libraTitleUsernameInput {
+        position: absolute;
+        background-color: #5E6776;
+        width: 190px;
+        height: 30px;
+        top: 350px;
+        left: 80px;
+        padding-left: 18px;
+        padding-right: 18px;
+        border-radius: 16px;
+        color: white;
+        font-family: MontserratRegular;
+        font-size: 20px;
+        border: none;
+        outline: none;
+    }
+    .libraTitleClasscodeInputNormal {
+        position: absolute;
+        background-color: rgba(160, 160, 160, 0.75);
+        width: 206px;
+        height: 30px;
+        top: 425px;
+        left: 80px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 16px;
+        color: white;
+        font-family: MontserratRegular;
+        font-size: 16px;
+        border: none;
+        outline: none;
+    }
+    .libraTitleClasscodeInputReady {
+        position: absolute;
+        background-color: #5E6776;
+        width: 206px;
+        height: 30px;
+        top: 425px;
+        left: 80px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 16px;
+        color: white;
+        font-family: MontserratRegular;
+        font-size: 16px;
+        border: none;
+        outline: none;
+    }
+    .libraStartRoomBtnNormal {
+        position: absolute;
+        width: 175px;
+        height: 30px;
+        top: 510px;
+        left: 100px;
+        opacity: 0.25;
+        border: 3px solid white;
+        border-radius: 5px;
+        color: white;
+        font-family: MontserratRegular;
+        font-size: 20px;
+        text-align: center;
+        line-height: 28px;
+    }
+    .libraStartRoomBtnReady {
+        position: absolute;
+        width: 175px;
+        height: 30px;
+        top: 510px;
+        left: 100px;
+        opacity: 1;
+        border: 3px solid white;
+        border-radius: 5px;
+        color: white;
+        font-family: MontserratRegular;
+        font-size: 20px;
+        text-align: center;
+        line-height: 28px;
+    }
+    .titleCancelJoin {
+        position: absolute;
+        top: 471px;
+        left: 15px;
+        width: 32px;
+        height: 32px;
+        background-image: url('./images/X_Button.png');
+        background-repeat: no-repeat;
+    }
+    .titleCancelJoin:hover {
+        background-image: url('./images/X_Button_Hover.png');
+        background-repeat: no-repeat;
+    }
+    .titleWaitingText {
+        position: absolute;
+        top: 490px;
+        left: 65px;
+        font-family: MontserratRegular;
+        font-size: 20px;
+        color: #AFB3B6;
+    }
+    .playerDotUnjoined {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        top: 530px;
+        background-color: #5E6776;
+    }
+    .playerADot {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        top: 530px;
+        background-color: #ffc300;
+    }
+    .playerBDot {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        top: 530px;
+        background-color: #19b4ff;
+    }
+    .playerCDot {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        top: 530px;
+        background-color: #ff5f57;
+    }
+    ::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: MontserratRegular;
+        font-size: 14px;
+    }
+    .resultsFinalChatText {
+        position: absolute;
+        top: 21px;
+        width: 100%;
+        height: 21px;
+        opacity: 0.75; 
+        font-family: MontserratSemiBold;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 21px;
+    }
+    .finalContinueBtn {
+        position: absolute;
+        width: 214px;
+        height: 32px;
+        top: 15px;
+        left: 701px;
+        opacity: 1;
+        border: 3px solid white;
+        border-radius: 5px;
+        color: white;
+        font-family: MontserratSemiBold;
+        font-size: 20.5px;
+        text-align: center;
+        line-height: 32px;
+    }
+    .directionOfChat {
+        position: absolute; 
+        left: 45px; 
+        top: 82px; 
+        width: 100%;
+        font-family: MontserratSemiBold; 
+        font-weight: 600;
+        font-size: 20px; 
+        color: rgba(255, 255, 255, 0.25); 
+        z-index: 100;
+        line-height: 20px;
+    }
+    .finalPlayerAName {
+        position: absolute;
+        left: 30px;
+        top: 159px;
+        z-index: 100;
+        font-family: MontserratSemiBold;
+        font-size: 24px;
+        color: #ffc300;
+        width: 280px;
+        text-align: center;
+    }
+    .finalPlayerBName {
+        position: absolute;
+        left: 630px;
+        top: 159px;
+        z-index: 100;
+        font-family: MontserratSemiBold;
+        font-size: 24px;
+        color: #19b4ff;
+        width: 280px;
+        text-align: center;
+    }
+    .finalPlayerCName {
+        position: absolute;
+        left: 330px;
+        top: 567px;
+        z-index: 100;
+        font-family: MontserratSemiBold;
+        font-size: 24px;
+        color: #ff5f57;
+        width: 280px;
+        text-align: center;
+    }
+    .vizSVGHolder {
+        position: absolute; 
+        left: 100px; 
+        top: 165px; 
+        width: 400px; 
+        height: 400px;
+    }
+    .finalSVGHolder {
+        position: absolute; 
+        left: 20px; 
+        top: 63px; 
+        width: 895px; 
+        height: 546px; 
+        background-color: #253548; 
+        border-radius: 10px;
+    }
+    .finalHorizontalBarLabels {
+        position: absolute;
+        display: inline-flex;
+        left: 27px;
+        top: 55px;
+        width: 841px;
+        height: 24px;  
+    }
+    .finalHorizontalLabelPlayerA {
+        width: 33.3%;
+        color: #ffc300;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px;
+    }
+    .finalHorizontalLabelPlayerB {
+        width: 33.4%;
+        color: #19b4ff;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px;
+    }
+    .finalHorizontalLabelPlayerC {
+        width: 33.3%;
+        color: #ff5f57;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px;
+    }
+    .finalHorizontalVizBarHolder {
+        position: absolute;
+        display: inline-flex;
+        left: 27px;
+        top: 81px;
+        width: 841px;
+        height: 48px;
+        border-radius: 5px;
+    }
+    .finalHorizontalVizPlayerA {
+        width: 33.3%;
+        background-color: #ffc300;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        color: #2f4156;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 48px;
+    }
+    .finalHorizontalVizPlayerB {
+        width: 33.4%;
+        background-color: #19b4ff;
+        color: #2f4156;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 48px;
+    }
+    .finalHorizontalVizPlayerC {
+        width: 33.3%;
+        background-color: #ff5f57;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: #2f4156;
+        font-family: MontserratBold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 48px;
+    }
+    .finalTextBarVizHolder {
+        background-color: #253548;
+        border-radius: 10px;
+        position: absolute;
+        left: 20px;
+        top: 627px;
+        width: 895px;
+        height: 159px;
+    }
+    .numberOfMessages {
+        position: absolute;
+        left: 22px;
+        top: 19px;
+        width: 100%;
+        font-family: MontserratSemiBold;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.25);
+        line-height: 20px;
+    }
+    .reportDownloadModal {
+        position: absolute; 
+        left: 170px;
+        top: 42px;
+        width: 935px; 
+        height: 806px; 
+        background-color: #2f4156;
+        border-radius: 5px;
+        border: 3px solid #8A8D91;
+        box-shadow: -8.5px 8.5px 0 0 rgba(18, 77, 107, 0.25);
+    }
+    .reportDownloadTopLine {
+        position: absolute;
+        left: 0px;
+        top: 250px;
+        width: 100%;
+        font-family: MontserratSemiBold;
+        font-size: 38px;
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+    }
+    .reportDownloadBottomLine {
+        position: absolute;
+        left: 20%;
+        top: 380px;
+        width: 60%;
+        font-family: MontserratSemiBold;
+        font-size: 34px;
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+</style>
+<div id='titleMenu' class='titleMenu' style='display: block;'>
+    <div class='libraLoginBG'>
+        <div class='libraTitleText'>LIBRA</div>
+        <div class='libraTitleChatSystem'>CHAT SYSTEM</div>
+        <div id='titleTriangle' class='libraTitleTriangleNormal'></div>
+        <input id='titleUsernameInputBox' type='text' maxlength='32' class='libraTitleUsernameInput' placeholder='Enter your username here...' onkeypress="game.scene.scenes[0].ValidateTitleInput();" />
+        <input id='titleClasscodeInputBox' type='number' min="0000" max="9999" pattern="[0-9]{4}" class='libraTitleClasscodeInputNormal' placeholder='Enter your 4-digit classcode here...' onkeyup="game.scene.scenes[0].ValidateTitleInput(event);" />
+    <div id='titleStartRoomBtn' class='libraStartRoomBtnNormal' onclick='game.scene.scenes[0].LogIn();'>Start Room</div>
+
+        <div id='titleCancelJoinBtn' class='titleCancelJoin' style='display: none;' onclick='game.scene.scenes[0].CancelLogin();'></div>
+        <div id='titleWaitingText' class='titleWaitingText' style='display: none;'>Waiting for other players...</div>
+        <div id='titlePlayerAJoined' class='playerDotUnjoined' style='display: none; left: 100px;'></div>
+        <div id='titlePlayerBJoined' class='playerDotUnjoined' style='display: none; left: 175px;'></div>
+        <div id='titlePlayerCJoined' class='playerDotUnjoined' style='display: none; left: 250px;'></div>
+    </div>
+</div>
+<div id='mainFrame' class='mainFrame' style='display: none;'>
+    <div id='endChatBtn' class='endChatButton' onclick='game.scene.scenes[0].EndChatClicked();'>End Chat</div>
+    <div class='libraChatSystem'>LIBRA CHAT SYSTEM</div>
+    <div id='slimModeBtn' class='slimModeButton' onclick='game.scene.scenes[0].SetThinMode();'>Slim</div>
+    <div id='notificationBtn' class='notificationButtonOff' onclick='game.scene.scenes[0].NotificationToggle();'></div>
+
+    <div id='vizHolder' class='vizHolder'>
+        <div class='communicationFeedback'>COMMUNICATION FEEDBACK</div>
+
+        <svg class='vizSVGHolder' >
+            <g transform="scale(0.8) translate(-87, -115)">
+                <path id='ArcA' d="M 138.38 454.39 C 111.15 392.51 114.32 321.47 146.95 262.26 C 179.58 203.05 237.95 162.43 304.81 152.4 L 304.81 152.4 C 237.95 162.43 179.58 203.05 146.95 262.26 C 114.32 321.47 111.15 392.51 138.38 454.39 Z" fill="none" stroke="#ffc300" stroke-width="30" stroke-miterlimit="10" pointer-events="none"/>
+                <path id='ArcB' d="M 138.38 454.39 C 111.15 392.51 114.32 321.47 146.95 262.26 C 179.58 203.05 237.95 162.43 304.81 152.4 L 304.81 152.4 C 237.95 162.43 179.58 203.05 146.95 262.26 C 114.32 321.47 111.15 392.51 138.38 454.39 Z" fill="none" stroke="#19b4ff" stroke-width="30" stroke-miterlimit="10" transform="translate(337,0)scale(-1,1)translate(-337,0)" pointer-events="none"/>
+                <path id='ArcC' d="M 138.38 454.39 C 111.15 392.51 114.32 321.47 146.95 262.26 C 179.58 203.05 237.95 162.43 304.81 152.4 L 304.81 152.4 C 237.95 162.43 179.58 203.05 146.95 262.26 C 114.32 321.47 111.15 392.51 138.38 454.39 Z" fill="none" stroke="#ff5f57" stroke-width="30" stroke-miterlimit="10" transform="rotate(240,337,367)" pointer-events="none"/>
+
+                <path id='ArcAB' d="M 264.95 92.09 C 286.28 64.82 320.88 51.48 354.99 57.37 C 389.11 63.26 417.23 87.43 428.18 120.27 L 428.18 120.27 C 417.23 87.43 389.11 63.26 354.99 57.37 C 320.88 51.48 286.28 64.82 264.95 92.09 Z" fill="none" stroke="#ffc300" stroke-miterlimit="10" transform="rotate(180,339,150)" pointer-events="none"/>
+                <path id='TriAB' d="M 262.25 0.5 L 263.25 1 L 262.25 1.5 Z" fill="none" stroke="#ffc300" stroke-miterlimit="10" transform="rotate(309,262.75,1) translate(-60, 247)" pointer-events="none"/>
+                <path id='ArcAC' d="M 164.95 628.2 C 112.65 633.63 61.33 611.19 29.82 569.09 C -1.69 527 -8.77 471.44 11.17 422.79 L 11.17 422.79 C -8.77 471.44 -1.69 527 29.82 569.09 C 61.33 611.19 112.65 633.63 164.95 628.2 Z" fill="none" stroke="#ffc300" stroke-miterlimit="10" transform="rotate(180,149.5,479.5)" pointer-events="none"/>
+                <path id='TriAC' d="M 135.85 331 L 136.85 331.5 L 135.85 332 Z" fill="none" stroke="#ffc300" stroke-miterlimit="10" transform="rotate(112,136.35,331.5) translate(139, -217)" pointer-events="none"/>
+
+                <path id='ArcBA' d="M 203.64 88.71 C 225.57 39.91 271.91 6.56 325.15 1.24 C 378.38 -4.08 430.4 19.46 461.55 62.96 L 461.55 62.96 C 430.4 19.46 378.38 -4.08 325.15 1.24 C 271.91 6.56 225.57 39.91 203.64 88.71 Z" fill="none" stroke="#19b4ff" stroke-miterlimit="10" transform="rotate(180,340,150)" pointer-events="none"/>
+                <path id='TriBA' d="M 66.3 29.5 L 67.3 30 L 66.3 30.5 Z" fill="none" stroke="#19b4ff" stroke-miterlimit="10" transform="rotate(237,66.8,30) translate(-251, 14)" pointer-events="none"/>
+                <path id='ArcBC' d="M 614.62 440.7 C 628.65 471.67 624.87 507.81 604.72 535.2 C 584.58 562.58 551.21 576.96 517.47 572.79 L 517.47 572.79 C 551.21 576.96 584.58 562.58 604.72 535.2 C 624.87 507.81 628.65 471.67 614.62 440.7 Z" fill="none" stroke="#19b4ff" stroke-miterlimit="10" transform="rotate(180,529,479.5)" pointer-events="none"/>
+                <path id='TriBC' d="M 292.45 313 L 293.45 313.5 L 292.45 314 Z" fill="none" stroke="#19b4ff" stroke-miterlimit="10" transform="rotate(66,292.95,313.5) translate(253, -54)" pointer-events="none"/>
+
+                <path id='ArcCA' d="M 146.87 573.45 C 111.09 572.26 79.1 550.85 64.35 518.24 C 49.6 485.62 54.65 447.47 77.38 419.81 L 77.38 419.81 C 54.65 447.47 49.6 485.62 64.35 518.24 C 79.1 550.85 111.09 572.26 146.87 573.45 Z" fill="none" stroke="#ff5f57" stroke-miterlimit="10" transform="rotate(180,150,479.5)" pointer-events="none"/>
+                <path id='TriCA' d="M 358.65 124.85 L 359.65 125.35 L 358.65 125.85 Z" fill="none" stroke="#ff5f57" stroke-miterlimit="10" transform="rotate(352,359.15,125.35) translate(125, 225)" pointer-events="none"/>
+                <path id='ArcCB' d="M 654.99 397.48 C 683.06 440.24 687.31 494.39 666.26 541.02 C 645.21 587.64 601.78 620.26 551.14 627.5 L 551.14 627.5 C 601.78 620.26 645.21 587.64 666.26 541.02 C 687.31 494.39 683.06 440.24 654.99 397.48 Z" fill="none" stroke="#ff5f57" stroke-miterlimit="10" transform="rotate(180,530,479.5)" pointer-events="none"/>
+                <path id='TriCB' d="M 0.28 179.07 L 1.28 179.57 L 0.28 180.07 Z" fill="none" stroke="#ff5f57" stroke-miterlimit="10" transform="rotate(181,0.78,179.57) translate(-151, -203)" pointer-events="none"/>
+            </g>
+        </svg>
+
+        <div id='textVizPlayerAName' class='textVizPlayerA'>Player A</div>
+        <div id='textVizPlayerBName' class='textVizPlayerB'>Player B</div>
+        <div id='textVizPlayerCName' class='textVizPlayerC'>Player C</div>
+
+        <div class='horizontalBarLabels'>
+            <div id='horizontalLabelPlayerA' class='horizontalLabelPlayerA'>33%</div>
+            <div id='horizontalLabelPlayerB' class='horizontalLabelPlayerB'>33%</div>
+            <div id='horizontalLabelPlayerC' class='horizontalLabelPlayerC'>33%</div>
+        </div>
+        <div class='horizontalVizBarHolder'>
+            <div id='horizontalVizPlayerA' class='horizontalVizPlayerA'></div>
+            <div id='horizontalVizPlayerB' class='horizontalVizPlayerB'></div>
+            <div id='horizontalVizPlayerC' class='horizontalVizPlayerC'></div>
+        </div>
+        <div id='vizFrost' class='vizFrost' style='display: none;'><span id='frostText' class='frostText'>Visualization paused until team member rejoins.</span></div>
+    </div>
+    <div id='tab1' class='tab1Style' onclick='game.scene.scenes[0].Tab1Clicked();'><span id='tab1name'>All</span><div id='tab1unread' class='tabUnreadCircle' style='display: none;'>0</div></div>
+    <div id='tab2' class='tab2Style' onclick='game.scene.scenes[0].Tab2Clicked();'><span id='tab2name'>B</span><div id='tab2unread' class='tabUnreadCircle' style='display: none;'>0</div></div>
+    <div id='tab3' class='tab3Style' onclick='game.scene.scenes[0].Tab3Clicked();'><span id='tab3name'>C</span><div id='tab3unread' class='tabUnreadCircle' style='display: none;'>0</div></div>
+    <div id='convoHolder' class='textHolder'>
+        <div id='convoDisplay' class='conversationDisplay'>
+        
+        </div>
+        <div id='typingNotification' class='typingNotification'></div>
+        <div id='endChatNotification' class='systemBubbleDisplay'>
+            <div class='textBubbleSystem'>
+				<div id='endChatPrompt' style='text-align: center;;' >Player <span id='endChatRequestor'>Player</span> has requested to end the chat and get the results. If everyone agrees, the chat will end.  Would you like to end the chat?</div>
+				<div id='endChatBtnHolder' style='display: inline-flex; padding-top: 20px;'>
+					<div id='endChatYesBtn' class='textBubbleButtonLeft' onclick='game.scene.scenes[0].EndChatVoteYes();'>Yes</div>
+					<div id='endChatNoBtn' class='textBubbleButtonRight' onclick='game.scene.scenes[0].EndChatVoteNo();'>No</div>
+                </div>
+                <div id='PlayerAVote' style='display: none; line-height: 20px; padding-left: 30px;' ><span id='PlayerAVoteName' style='color: #FFD71B;'>You</span> have elected to end the chat. Please wait for the other players to respond.</div>
+                <div id='PlayerBVote' style='display: none; line-height: 20px; padding-left: 30px;' ><span id='PlayerBVoteName' style='color: #18B4FE;'>You</span> have elected to end the chat. Please wait for the other players to respond.</div>
+                <div id='PlayerCVote' style='display: none; line-height: 20px; padding-left: 30px;' ><span id='PlayerCVoteName' style='color: #FE6057;'>You</span> have elected to end the chat. Please wait for the other players to respond.</div>
+                <div id='endChatTimer' style='display: none; width: 100%; line-height: 20px; color: #bfbfbf; text-align: center;'>:00 until end of session.</div>
+			</div>
+        </div>
+    </div>
+    <div id='emoteMenu' class='emoteMenu' style='display: none;' >
+		<div id='emoteButton0Btn' onclick="$('#chatInputBox').val($('#chatInputBox').val() + ' \uE904 '); $('#emoteMenu').hide();" class='emoteItem emoteButton0' ></div>
+		<div id='emoteButton1Btn' onclick="$('#chatInputBox').val($('#chatInputBox').val() + ' \uE902 '); $('#emoteMenu').hide();" class='emoteItem emoteButton1' ></div>
+		<div id='emoteButton2Btn' onclick="$('#chatInputBox').val($('#chatInputBox').val() + ' \uE906 '); $('#emoteMenu').hide();" class='emoteItem emoteButton2' ></div>
+		<div id='emoteButton3Btn' onclick="$('#chatInputBox').val($('#chatInputBox').val() + ' \uE905 '); $('#emoteMenu').hide();" class='emoteItem emoteButton3' ></div>
+		<div id='emoteButton4Btn' onclick="$('#chatInputBox').val($('#chatInputBox').val() + ' \uE900 '); $('#emoteMenu').hide();" class='emoteItem emoteButton4' ></div>
+		<div id='emoteButton5Btn' onclick="$('#chatInputBox').val($('#chatInputBox').val() + ' \uE903 '); $('#emoteMenu').hide();" class='emoteItem emoteButton5' ></div>
+		<div id='emoteButton6Btn' onclick="$('#chatInputBox').val($('#chatInputBox').val() + ' \uE907 '); $('#emoteMenu').hide();" class='emoteItem emoteButton6' ></div>
+	</div>
+    <div id='chatControlsHolder' class='chatControls'>
+        <div id='emoteMenuBtn' class='emoteMenuBtn' onclick='$("#emoteMenu").toggle();'></div>
+        <input id='chatInputBox' class='chatInput' onkeyup='game.scene.scenes[0].SetTyping(event);'/>
+        <div id='sendBtn' class='sendBtn' onclick='game.scene.scenes[0].SendButtonClicked();'></div>
+    </div>
+</div>
+<div id='resultsMenu' class='resultsMenu' style='display: none;'>
+    <div class='resultsFinalChatText'>FINAL CHAT OVERVIEW</div>
+    <div id='resultsContinueBtn' class='finalContinueBtn' onclick='game.scene.scenes[0].FinalContinueClicked();'>CONTINUE</div>
+
+    <div class='directionOfChat'>DIRECTION OF CHAT</div>
+    <div id='finalPlayerA' class='finalPlayerAName' >Player A</div>
+    <div id='finalPlayerB' class='finalPlayerBName' >Player B</div>
+    <div id='finalPlayerC' class='finalPlayerCName' >Player C</div>
+    <svg class='finalSVGHolder' >
+        <g transform="scale(0.95) translate(130, -75)">
+            <path id='resultsArcA' d="M 138.38 454.39 C 111.15 392.51 114.32 321.47 146.95 262.26 C 179.58 203.05 237.95 162.43 304.81 152.4 L 304.81 152.4 C 237.95 162.43 179.58 203.05 146.95 262.26 C 114.32 321.47 111.15 392.51 138.38 454.39 Z" fill="none" stroke="#ffc300" stroke-width="30" stroke-miterlimit="10" pointer-events="none"/>
+            <path id='resultsArcB' d="M 138.38 454.39 C 111.15 392.51 114.32 321.47 146.95 262.26 C 179.58 203.05 237.95 162.43 304.81 152.4 L 304.81 152.4 C 237.95 162.43 179.58 203.05 146.95 262.26 C 114.32 321.47 111.15 392.51 138.38 454.39 Z" fill="none" stroke="#19b4ff" stroke-width="30" stroke-miterlimit="10" transform="translate(337,0)scale(-1,1)translate(-337,0)" pointer-events="none"/>
+            <path id='resultsArcC' d="M 138.38 454.39 C 111.15 392.51 114.32 321.47 146.95 262.26 C 179.58 203.05 237.95 162.43 304.81 152.4 L 304.81 152.4 C 237.95 162.43 179.58 203.05 146.95 262.26 C 114.32 321.47 111.15 392.51 138.38 454.39 Z" fill="none" stroke="#ff5f57" stroke-width="30" stroke-miterlimit="10" transform="rotate(240,337,367)" pointer-events="none"/>
+
+            <path id='resultsArcAB' d="M 264.95 92.09 C 286.28 64.82 320.88 51.48 354.99 57.37 C 389.11 63.26 417.23 87.43 428.18 120.27 L 428.18 120.27 C 417.23 87.43 389.11 63.26 354.99 57.37 C 320.88 51.48 286.28 64.82 264.95 92.09 Z" fill="none" stroke="#ffc300" stroke-miterlimit="10" transform="rotate(180,339,150)" pointer-events="none"/>
+            <path id='resultsTriAB' d="M 262.25 0.5 L 263.25 1 L 262.25 1.5 Z" fill="none" stroke="#ffc300" stroke-miterlimit="10" transform="rotate(309,262.75,1) translate(-60, 247)" pointer-events="none"/>
+            <path id='resultsArcAC' d="M 164.95 628.2 C 112.65 633.63 61.33 611.19 29.82 569.09 C -1.69 527 -8.77 471.44 11.17 422.79 L 11.17 422.79 C -8.77 471.44 -1.69 527 29.82 569.09 C 61.33 611.19 112.65 633.63 164.95 628.2 Z" fill="none" stroke="#ffc300" stroke-miterlimit="10" transform="rotate(180,149.5,479.5)" pointer-events="none"/>
+            <path id='resultsTriAC' d="M 135.85 331 L 136.85 331.5 L 135.85 332 Z" fill="none" stroke="#ffc300" stroke-miterlimit="10" transform="rotate(112,136.35,331.5) translate(139, -217)" pointer-events="none"/>
+
+            <path id='resultsArcBA' d="M 203.64 88.71 C 225.57 39.91 271.91 6.56 325.15 1.24 C 378.38 -4.08 430.4 19.46 461.55 62.96 L 461.55 62.96 C 430.4 19.46 378.38 -4.08 325.15 1.24 C 271.91 6.56 225.57 39.91 203.64 88.71 Z" fill="none" stroke="#19b4ff" stroke-miterlimit="10" transform="rotate(180,340,150)" pointer-events="none"/>
+            <path id='resultsTriBA' d="M 66.3 29.5 L 67.3 30 L 66.3 30.5 Z" fill="none" stroke="#19b4ff" stroke-miterlimit="10" transform="rotate(237,66.8,30) translate(-251, 14)" pointer-events="none"/>
+            <path id='resultsArcBC' d="M 614.62 440.7 C 628.65 471.67 624.87 507.81 604.72 535.2 C 584.58 562.58 551.21 576.96 517.47 572.79 L 517.47 572.79 C 551.21 576.96 584.58 562.58 604.72 535.2 C 624.87 507.81 628.65 471.67 614.62 440.7 Z" fill="none" stroke="#19b4ff" stroke-miterlimit="10" transform="rotate(180,529,479.5)" pointer-events="none"/>
+            <path id='resultsTriBC' d="M 292.45 313 L 293.45 313.5 L 292.45 314 Z" fill="none" stroke="#19b4ff" stroke-miterlimit="10" transform="rotate(66,292.95,313.5) translate(253, -54)" pointer-events="none"/>
+
+            <path id='resultsArcCA' d="M 146.87 573.45 C 111.09 572.26 79.1 550.85 64.35 518.24 C 49.6 485.62 54.65 447.47 77.38 419.81 L 77.38 419.81 C 54.65 447.47 49.6 485.62 64.35 518.24 C 79.1 550.85 111.09 572.26 146.87 573.45 Z" fill="none" stroke="#ff5f57" stroke-miterlimit="10" transform="rotate(180,150,479.5)" pointer-events="none"/>
+            <path id='resultsTriCA' d="M 358.65 124.85 L 359.65 125.35 L 358.65 125.85 Z" fill="none" stroke="#ff5f57" stroke-miterlimit="10" transform="rotate(352,359.15,125.35) translate(125, 225)" pointer-events="none"/>
+            <path id='resultsArcCB' d="M 654.99 397.48 C 683.06 440.24 687.31 494.39 666.26 541.02 C 645.21 587.64 601.78 620.26 551.14 627.5 L 551.14 627.5 C 601.78 620.26 645.21 587.64 666.26 541.02 C 687.31 494.39 683.06 440.24 654.99 397.48 Z" fill="none" stroke="#ff5f57" stroke-miterlimit="10" transform="rotate(180,530,479.5)" pointer-events="none"/>
+            <path id='resultsTriCB' d="M 0.28 179.07 L 1.28 179.57 L 0.28 180.07 Z" fill="none" stroke="#ff5f57" stroke-miterlimit="10" transform="rotate(181,0.78,179.57) translate(-151, -203)" pointer-events="none"/>
+        </g>
+    </svg>
+
+    <div class='finalTextBarVizHolder' >
+        <div class='numberOfMessages' >NUMBER OF MESSAGES</div>
+        <div class='finalHorizontalBarLabels'>
+            <div id='finalHorizontalLabelPlayerA' class='finalHorizontalLabelPlayerA'>33%</div>
+            <div id='finalHorizontalLabelPlayerB' class='finalHorizontalLabelPlayerB'>33%</div>
+            <div id='finalHorizontalLabelPlayerC' class='finalHorizontalLabelPlayerC'>33%</div>
+        </div>
+        <div class='finalHorizontalVizBarHolder'>
+            <div id='finalHorizontalVizPlayerA' class='finalHorizontalVizPlayerA'></div>
+            <div id='finalHorizontalVizPlayerB' class='finalHorizontalVizPlayerB'></div>
+            <div id='finalHorizontalVizPlayerC' class='finalHorizontalVizPlayerC'></div>
+        </div>
+    </div>
+</div>
+<div id='reportDownloadModal' class='reportDownloadModal' style='display: none;'>
+    <div class='reportDownloadTopLine'>Thanks for using Libra!</div>
+    <div class='reportDownloadBottomLine'>Please wait a moment for your chat visualization to download...</div>
+</div>
