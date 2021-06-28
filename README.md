@@ -1,6 +1,8 @@
 # Libra-Text
 Libra Text is a 3-person chat app that is designed to run on AWS, though it can and has been run on other architectures, such as Photon Cloud. 
 
+![Current General Architecture](LibraTextDiagramRed.png)
+
 The client is run from a website hosted on an S3 bucket. The client then connects to the server, and communicates with the other uses by sending JSON text messages relayed by the server.
 
 The server is a NodeJS server on an EC2 instance sitting behind a Load Balancer. As the server files are stored here, below is a list of specs/installs needed for the NodeJS environment:
